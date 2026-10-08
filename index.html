@@ -1,0 +1,1402 @@
+<!DOCTYPE html>
+<html lang="id" class="dark scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GAMESTORE - Jasa Joki Mobile Legends & Stick War Saga Aman & Cepat</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            dark: '#080B11',
+                            card: '#121824',
+                            cardHover: '#1B2436',
+                            purple: '#7C3AED',
+                            gold: '#F59E0B',
+                            cyan: '#06B6D4',
+                            red: '#EF4444',
+                            emerald: '#10B981'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Plus Jakarta Sans', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: #080B11;
+            color: #F3F4F6;
+        }
+        .glow-purple {
+            box-shadow: 0 0 25px -5px rgba(124, 58, 237, 0.4);
+        }
+        .glow-gold {
+            box-shadow: 0 0 20px -3px rgba(245, 158, 11, 0.35);
+        }
+        .glow-red {
+            box-shadow: 0 0 20px -3px rgba(239, 68, 68, 0.35);
+        }
+        .glass-card {
+            background: rgba(18, 24, 36, 0.85);
+            backdrop-filter: blur(14px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #080B11;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #1B2436;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #7C3AED;
+        }
+    </style>
+</head>
+<body class="bg-brand-dark text-gray-100 min-h-screen flex flex-col selection:bg-brand-purple selection:text-white">
+
+    <header class="sticky top-0 z-50 glass-card border-b border-gray-800/80">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <!-- Logo -->
+            <a href="#" class="flex items-center gap-3 group">
+                <div class="w-11 h-11 rounded-xl bg-gradient-to-tr from-brand-purple via-brand-cyan to-amber-400 flex items-center justify-center font-extrabold text-xl text-white shadow-lg group-hover:scale-105 transition-transform duration-300">
+                    <i class="fa-solid fa-gamepad"></i>
+                </div>
+                <div>
+                    <span class="text-xl font-black tracking-wider bg-clip-text text-transparent bg-gradient-to-r from-amber-400 via-purple-400 to-cyan-400">
+                        GAMESTORE
+                    </span>
+                    <span class="block text-[10px] tracking-widest text-gray-400 font-semibold uppercase -mt-1">MLBB & Stick War Saga</span>
+                </div>
+            </a>
+
+            <!-- Desktop Nav -->
+            <nav class="hidden md:flex items-center gap-8 text-sm font-semibold text-gray-300">
+                <a href="#games" class="hover:text-amber-400 transition-colors">Pilih Game</a>
+                <a href="#layanan" class="hover:text-amber-400 transition-colors">Keunggulan</a>
+                <a href="#pricelist" class="hover:text-amber-400 transition-colors">Price List</a>
+                <a href="#testimoni" class="hover:text-amber-400 transition-colors">Testimoni</a>
+                <a href="#order" class="hover:text-amber-400 transition-colors">Form Order</a>
+            </nav>
+
+            <!-- Status & Mobile Menu Toggle -->
+            <div class="flex items-center gap-4">
+                <div class="hidden sm:flex items-center gap-2 bg-emerald-950/60 border border-emerald-500/30 px-3 py-1.5 rounded-full text-xs font-semibold text-emerald-400">
+                    <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+                    Admin Online (24 Jam)
+                </div>
+
+                <a href="#order" class="hidden sm:inline-flex items-center justify-center px-4 py-2 text-xs font-bold rounded-lg text-slate-950 bg-amber-400 hover:bg-amber-300 transition-all glow-gold">
+                    Order Sekarang
+                </a>
+
+                <button id="mobile-menu-btn" class="md:hidden text-gray-300 hover:text-white text-2xl focus:outline-none">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Nav Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-brand-card/95 border-b border-gray-800 px-4 pt-3 pb-6 space-y-3">
+            <a href="#games" class="block py-2 text-gray-300 hover:text-amber-400 font-medium">Pilih Game</a>
+            <a href="#layanan" class="block py-2 text-gray-300 hover:text-amber-400 font-medium">Keunggulan</a>
+            <a href="#pricelist" class="block py-2 text-gray-300 hover:text-amber-400 font-medium">Price List</a>
+            <a href="#testimoni" class="block py-2 text-gray-300 hover:text-amber-400 font-medium">Testimoni</a>
+            <a href="#order" class="block py-2 text-amber-400 font-bold">Form Order</a>
+        </div>
+    </header>
+
+    <section class="relative overflow-hidden pt-10 pb-16 lg:pt-16 lg:pb-24">
+        <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-brand-purple/20 rounded-full blur-[120px] pointer-events-none"></div>
+        <div class="absolute top-1/3 right-10 w-[300px] h-[300px] bg-brand-cyan/15 rounded-full blur-[100px] pointer-events-none"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center max-w-3xl mx-auto space-y-6">
+                <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-purple-950/80 border border-purple-500/40 text-purple-300 text-xs font-bold uppercase tracking-wider">
+                    <i class="fa-solid fa-fire text-amber-400"></i> DUA OPTION GAME JOKI OFFICIAL
+                </div>
+                
+                <h1 class="text-3xl sm:text-5xl lg:text-6xl font-black leading-tight tracking-tight">
+                    Jasa Push Rank & Joki Game <br>
+                    <span class="bg-clip-text text-transparent bg-gradient-to-r from-amber-400 via-purple-300 to-cyan-400">
+                        Cepat, Safe & Garansi Bintang
+                    </span>
+                </h1>
+                
+                <p class="text-gray-400 text-sm sm:text-base max-w-2xl mx-auto">
+                    Pilih opsi layanan game kamu: Push Rank Mythic Immortal <b>Mobile Legends</b> atau tamatin Campaign & Push Arena <b>Stick War Saga</b>. Murni skill 100% tanpa cheat.
+                </p>
+
+                <div id="games" class="pt-6 grid grid-cols-1 sm:grid-cols-2 gap-5 max-w-2xl mx-auto">
+                    <!-- Option 1 Card: Mobile Legends -->
+                    <div onclick="selectGameMode('mlbb')" id="heroCardMLBB" class="glass-card p-5 rounded-2xl border-2 border-purple-500 cursor-pointer bg-purple-950/30 transition-all hover:scale-[1.02] text-left relative overflow-hidden group">
+                        <div class="absolute top-3 right-3 text-xs bg-purple-500/30 text-purple-300 px-2 py-0.5 rounded font-bold border border-purple-500/40">
+                            OPSI 1
+                        </div>
+                        <div class="w-12 h-12 rounded-xl bg-gradient-to-tr from-purple-600 to-indigo-600 flex items-center justify-center text-white text-2xl font-black mb-3 shadow">
+                            <i class="fa-solid fa-crown"></i>
+                        </div>
+                        <h3 class="font-extrabold text-white text-lg group-hover:text-purple-300 transition-colors">Mobile Legends</h3>
+                        <p class="text-xs text-gray-400 mt-1">Per Bintang, Paket Borongan Tier, Winrate Classic, Mabar Gendong</p>
+                        <div class="mt-4 flex items-center gap-2 text-xs text-purple-400 font-bold">
+                            <span>Pilih Game Ini</span> <i class="fa-solid fa-arrow-right text-xs"></i>
+                        </div>
+                    </div>
+
+                    <!-- Option 2 Card: Stick War Saga -->
+                    <div onclick="selectGameMode('stickwar')" id="heroCardStickWar" class="glass-card p-5 rounded-2xl border border-gray-700 cursor-pointer hover:border-amber-500 transition-all hover:scale-[1.02] text-left relative overflow-hidden group">
+                        <div class="absolute top-3 right-3 text-xs bg-amber-500/20 text-amber-300 px-2 py-0.5 rounded font-bold border border-amber-500/40">
+                            OPSI 2
+                        </div>
+                        <div class="w-12 h-12 rounded-xl bg-gradient-to-tr from-red-700 via-amber-600 to-red-900 flex items-center justify-center p-0.5 shadow-lg overflow-hidden border border-amber-400/50 mb-3">
+                            <!-- SVG Avatar King Zarek (Stick War Saga King) -->
+                            <svg viewBox="0 0 200 200" class="w-full h-full rounded-lg" xmlns="http://www.w3.org/2000/svg">
+                                <!-- Red Throne Room Backdrop & Curtains -->
+                                <rect width="200" height="200" fill="#991B1B" />
+                                <path d="M0,0 L20,200 M40,0 L50,200 M160,0 L150,200 M200,0 L180,200" stroke="#7f1d1d" stroke-width="6" opacity="0.6" />
+                                
+                                <!-- Golden Throne Backrest -->
+                                <path d="M 25 200 L 25 35 Q 25 20 40 20 L 50 20 L 50 200 Z" fill="#d97706" stroke="#18181b" stroke-width="4" />
+                                <path d="M 175 200 L 175 35 Q 175 20 160 20 L 150 20 L 150 200 Z" fill="#d97706" stroke="#18181b" stroke-width="4" />
+                                <circle cx="37" cy="20" r="8" fill="#f59e0b" stroke="#18181b" stroke-width="3" />
+                                <circle cx="163" cy="20" r="8" fill="#f59e0b" stroke="#18181b" stroke-width="3" />
+                                <rect x="50" y="40" width="100" height="160" fill="#7f1d1d" stroke="#18181b" stroke-width="3" />
+
+                                <!-- Royal Red Mantle / Cape -->
+                                <path d="M 30 200 Q 30 130 100 130 Q 170 130 170 200 Z" fill="#dc2626" stroke="#18181b" stroke-width="4" />
+                                
+                                <!-- Stickman Body & Raised Hand (Waving Hand Gesture from Image) -->
+                                <path d="M 135 135 L 158 100 L 162 65" stroke="#18181b" stroke-width="14" stroke-linecap="round" stroke-linejoin="round" />
+                                <path d="M 162 65 L 155 48 M 162 65 L 163 45 M 162 65 L 170 48 M 162 65 L 175 55 M 162 65 L 150 60" stroke="#18181b" stroke-width="4" stroke-linecap="round" />
+                                
+                                <!-- Resting Hand holding Golden Orb -->
+                                <path d="M 65 135 L 82 160 L 92 165" stroke="#18181b" stroke-width="14" stroke-linecap="round" stroke-linejoin="round" />
+                                <circle cx="95" cy="170" r="12" fill="#f59e0b" stroke="#18181b" stroke-width="3" />
+                                <path d="M 95 154 L 95 162 M 91 158 L 99 158" stroke="#18181b" stroke-width="3" />
+
+                                <!-- Ermine Fur Collar (White fur with black spots) -->
+                                <path d="M 50 142 C 50 115 150 115 150 142 C 135 158 65 158 50 142 Z" fill="#f8fafc" stroke="#18181b" stroke-width="4" />
+                                <path d="M 70 132 L 73 138 M 70 138 L 73 138 M 100 136 L 103 142 M 130 132 L 133 138" stroke="#18181b" stroke-width="4" stroke-linecap="round" />
+
+                                <!-- Stickman Head -->
+                                <circle cx="100" cy="90" r="32" fill="#18181b" />
+
+                                <!-- Sleepy / Calm Eyes from Image -->
+                                <ellipse cx="86" cy="85" rx="7" ry="5" fill="#ffffff" />
+                                <circle cx="86" cy="86" r="2.5" fill="#18181b" />
+                                <path d="M 78 84 Q 86 89 94 84" stroke="#18181b" stroke-width="3" fill="#18181b" />
+                                
+                                <ellipse cx="114" cy="85" rx="7" ry="5" fill="#ffffff" />
+                                <circle cx="114" cy="86" r="2.5" fill="#18181b" />
+                                <path d="M 106 84 Q 114 89 122 84" stroke="#18181b" stroke-width="3" fill="#18181b" />
+
+                                <!-- Eyebrows -->
+                                <path d="M 78 78 Q 86 81 93 77" stroke="#18181b" stroke-width="3" fill="none" stroke-linecap="round" />
+                                <path d="M 107 77 Q 114 81 122 78" stroke="#18181b" stroke-width="3" fill="none" stroke-linecap="round" />
+
+                                <!-- White Beard & Moustache -->
+                                <path d="M 72 100 Q 100 132 128 100 Q 100 108 72 100 Z" fill="#e2e8f0" stroke="#18181b" stroke-width="3" />
+                                <path d="M 82 96 Q 100 104 118 96 Q 100 92 82 96 Z" fill="#cbd5e1" stroke="#18181b" stroke-width="2" />
+
+                                <!-- King Zarek's Crown -->
+                                <path d="M 68 62 C 68 38 132 38 132 62 Z" fill="#991b1b" stroke="#18181b" stroke-width="3" />
+                                <path d="M 62 65 L 62 38 L 80 52 L 100 24 L 120 52 L 138 38 L 138 65 Z" fill="#f59e0b" stroke="#18181b" stroke-width="3.5" stroke-linejoin="round" />
+                                <rect x="62" y="58" width="76" height="9" rx="2" fill="#fbbf24" stroke="#18181b" stroke-width="2.5" />
+                                
+                                <!-- Crown Jewels -->
+                                <circle cx="100" cy="24" r="4" fill="#06b6d4" stroke="#18181b" stroke-width="2" />
+                                <circle cx="62" cy="38" r="3.5" fill="#06b6d4" stroke="#18181b" stroke-width="1.5" />
+                                <circle cx="138" cy="38" r="3.5" fill="#06b6d4" stroke="#18181b" stroke-width="1.5" />
+                                <circle cx="80" cy="62.5" r="2.5" fill="#06b6d4" />
+                                <circle cx="100" cy="62.5" r="3" fill="#ef4444" />
+                                <circle cx="120" cy="62.5" r="2.5" fill="#06b6d4" />
+                            </svg>
+                        </div>
+                        <h3 class="font-extrabold text-white text-lg group-hover:text-amber-300 transition-colors flex items-center gap-1.5">
+                            Stick War: Saga
+                        </h3>
+                        <p class="text-xs text-gray-400 mt-1">Campaign Normal/Hard/Insane Clear, Arena PvP Rank, Gems Farming</p>
+                        <div class="mt-4 flex items-center gap-2 text-xs text-amber-400 font-bold">
+                            <span>Pilih Game Ini</span> <i class="fa-solid fa-arrow-right text-xs"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Stats Summary -->
+                <div class="grid grid-cols-3 gap-4 pt-8 border-t border-gray-800/80 max-w-xl mx-auto">
+                    <div>
+                        <p class="text-2xl sm:text-3xl font-extrabold text-amber-400">18k+</p>
+                        <p class="text-xs text-gray-400 mt-1">Order Selesai</p>
+                    </div>
+                    <div>
+                        <p class="text-2xl sm:text-3xl font-extrabold text-purple-400">100%</p>
+                        <p class="text-xs text-gray-400 mt-1">Anti Banned</p>
+                    </div>
+                    <div>
+                        <p class="text-2xl sm:text-3xl font-extrabold text-cyan-400">120+</p>
+                        <p class="text-xs text-gray-400 mt-1">Pro Worker Ready</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="layanan" class="py-12 border-y border-gray-800/80 bg-brand-card/20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-10">
+                <h2 class="text-2xl sm:text-3xl font-extrabold text-white">Mengapa Memilih Joki Kami?</h2>
+                <p class="text-gray-400 text-xs sm:text-sm mt-1">Garansi pengerjaan cepat, privasi aman, dan jaminan target tercapai.</p>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="glass-card p-5 rounded-2xl hover:border-amber-500/50 transition-all">
+                    <div class="w-10 h-10 rounded-xl bg-amber-500/10 border border-amber-500/30 flex items-center justify-center text-amber-400 text-xl mb-3">
+                        <i class="fa-solid fa-shield-virus"></i>
+                    </div>
+                    <h3 class="text-base font-bold text-white mb-1">100% Murni Skill</h3>
+                    <p class="text-gray-400 text-xs leading-relaxed">Tanpa cheat, script, atau APK pihak ketiga. Akun Anda 100% aman dari banned.</p>
+                </div>
+
+                <div class="glass-card p-5 rounded-2xl hover:border-purple-500/50 transition-all">
+                    <div class="w-10 h-10 rounded-xl bg-purple-500/10 border border-purple-500/30 flex items-center justify-center text-purple-400 text-xl mb-3">
+                        <i class="fa-solid fa-user-ninja"></i>
+                    </div>
+                    <h3 class="text-base font-bold text-white mb-1">Worker Pro Player</h3>
+                    <p class="text-gray-400 text-xs leading-relaxed">Dikerjakan oleh joki berpengalaman dengan winrate tinggi dan penguasaan hero/stat terlengkap.</p>
+                </div>
+
+                <div class="glass-card p-5 rounded-2xl hover:border-cyan-500/50 transition-all">
+                    <div class="w-10 h-10 rounded-xl bg-cyan-500/10 border border-cyan-500/30 flex items-center justify-center text-cyan-400 text-xl mb-3">
+                        <i class="fa-solid fa-bolt"></i>
+                    </div>
+                    <h3 class="text-base font-bold text-white mb-1">Proses Cepat Kilat</h3>
+                    <p class="text-gray-400 text-xs leading-relaxed">Langsung diproses begitu pembayaran terverifikasi. Tidak perlu antre lama.</p>
+                </div>
+
+                <div class="glass-card p-5 rounded-2xl hover:border-emerald-500/50 transition-all">
+                    <div class="w-10 h-10 rounded-xl bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-center text-emerald-400 text-xl mb-3">
+                        <i class="fa-solid fa-lock"></i>
+                    </div>
+                    <h3 class="text-base font-bold text-white mb-1">Data Privasi Aman</h3>
+                    <p class="text-gray-400 text-xs leading-relaxed">Kerahasiaan data akun login terjamin 100%. Bebas konsultasi dengan admin 24 jam.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="pricelist" class="py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-8">
+                <span class="text-amber-400 text-xs font-bold tracking-widest uppercase">Harga Terjangkau</span>
+                <h2 class="text-2xl sm:text-3xl font-black text-white mt-1">Price List Resmi</h2>
+                <p class="text-gray-400 text-xs sm:text-sm mt-1">Pilih opsi game di bawah ini untuk melihat daftar paket harga lengkap.</p>
+            </div>
+
+            <!-- Price Switcher Tabs -->
+            <div class="flex justify-center gap-3 mb-10">
+                <button id="priceTabMLBB" onclick="selectGameMode('mlbb')" class="px-6 py-3 rounded-xl font-extrabold text-xs transition-all bg-purple-600 text-white shadow-lg glow-purple flex items-center gap-2">
+                    <i class="fa-solid fa-crown"></i> Opsi 1: Mobile Legends
+                </button>
+                <button id="priceTabStickWar" onclick="selectGameMode('stickwar')" class="px-6 py-3 rounded-xl font-extrabold text-xs transition-all bg-brand-dark text-gray-400 border border-gray-700 hover:border-amber-400 flex items-center gap-2">
+                    <i class="fa-solid fa-khanda"></i> Opsi 2: Stick War Saga
+                </button>
+            </div>
+
+            <!-- MLBB Price Container -->
+            <div id="mlbbPriceContainer" class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- Card MLBB Bintang -->
+                <div class="glass-card rounded-2xl p-6 border border-gray-800 flex flex-col justify-between hover:border-purple-500/50 transition-all">
+                    <div>
+                        <div class="flex justify-between items-start mb-4">
+                            <div>
+                                <h3 class="text-lg font-extrabold text-white">MLBB Per Bintang</h3>
+                                <p class="text-xs text-gray-400">Pilih bintang sesuai target</p>
+                            </div>
+                            <span class="bg-purple-500/20 text-purple-300 text-[10px] font-bold px-2 py-0.5 rounded border border-purple-500/30">Fleksibel</span>
+                        </div>
+                        <div class="space-y-2.5 my-4 border-y border-gray-800 py-4 text-xs text-gray-300">
+                            <div class="flex justify-between"><span>Grandmaster</span> <span class="font-bold text-amber-400">Rp 3.000 / Star</span></div>
+                            <div class="flex justify-between"><span>Epic</span> <span class="font-bold text-amber-400">Rp 5.000 / Star</span></div>
+                            <div class="flex justify-between"><span>Legend</span> <span class="font-bold text-amber-400">Rp 6.000 / Star</span></div>
+                            <div class="flex justify-between"><span>Mythic Star (1-25)</span> <span class="font-bold text-amber-400">Rp 10.000 / Star</span></div>
+                            <div class="flex justify-between"><span>Mythic Honor (26-50)</span> <span class="font-bold text-amber-400">Rp 13.000 / Star</span></div>
+                            <div class="flex justify-between"><span>Mythic Glory (50+)</span> <span class="font-bold text-amber-400">Rp 18.000 / Star</span></div>
+                        </div>
+                    </div>
+                    <a href="#order" onclick="setMLBBService('per_bintang')" class="w-full py-2.5 text-center bg-brand-purple hover:bg-purple-600 font-bold text-xs rounded-xl text-white transition-all">Order Bintang MLBB</a>
+                </div>
+
+                <!-- Card MLBB Paket Borongan -->
+                <div class="glass-card rounded-2xl p-6 border-2 border-amber-500/80 flex flex-col justify-between glow-gold">
+                    <div>
+                        <div class="flex justify-between items-start mb-4">
+                            <div>
+                                <h3 class="text-lg font-extrabold text-white">MLBB Paket Borongan</h3>
+                                <p class="text-xs text-gray-400">Hemat Tier Full Rank</p>
+                            </div>
+                            <span class="bg-amber-400 text-slate-950 font-black text-[10px] px-2 py-0.5 rounded uppercase">Best Seller 🔥</span>
+                        </div>
+                        <div class="space-y-2.5 my-4 border-y border-gray-800 py-4 text-xs text-gray-300">
+                            <div class="flex justify-between"><span>Epic V ➔ Legend V</span> <span class="font-bold text-amber-400">Rp 115.000</span></div>
+                            <div class="flex justify-between"><span>Legend V ➔ Mythic</span> <span class="font-bold text-amber-400">Rp 140.000</span></div>
+                            <div class="flex justify-between"><span>Mythic ➔ Mythic Honor</span> <span class="font-bold text-amber-400">Rp 235.000</span></div>
+                            <div class="flex justify-between"><span>Mythic Honor ➔ Glory</span> <span class="font-bold text-amber-400">Rp 310.000</span></div>
+                            <div class="flex justify-between"><span>Epic V ➔ Mythic Star</span> <span class="font-bold text-amber-400">Rp 245.000</span></div>
+                        </div>
+                    </div>
+                    <a href="#order" onclick="setMLBBService('paket_rank')" class="w-full py-2.5 text-center bg-amber-500 hover:bg-amber-400 font-black text-xs rounded-xl text-slate-950 transition-all">Order Borongan MLBB</a>
+                </div>
+
+                <!-- Card MLBB Classic & Mabar -->
+                <div class="glass-card rounded-2xl p-6 border border-gray-800 flex flex-col justify-between hover:border-cyan-500/50 transition-all">
+                    <div>
+                        <div class="flex justify-between items-start mb-4">
+                            <div>
+                                <h3 class="text-lg font-extrabold text-white">Classic WR & Mabar</h3>
+                                <p class="text-xs text-gray-400">Naikkan Winrate / Gendong</p>
+                            </div>
+                            <span class="bg-cyan-500/20 text-cyan-300 text-[10px] font-bold px-2 py-0.5 rounded border border-cyan-500/30">Mabar</span>
+                        </div>
+                        <div class="space-y-2.5 my-4 border-y border-gray-800 py-4 text-xs text-gray-300">
+                            <div class="flex justify-between"><span>Classic Win Rate</span> <span class="font-bold text-amber-400">Rp 4.000 / Match</span></div>
+                            <div class="flex justify-between"><span>Joki Gendong Epic</span> <span class="font-bold text-amber-400">Rp 8.000 / Win</span></div>
+                            <div class="flex justify-between"><span>Joki Gendong Legend</span> <span class="font-bold text-amber-400">Rp 10.000 / Win</span></div>
+                            <div class="flex justify-between"><span>Joki Gendong Mythic</span> <span class="font-bold text-amber-400">Rp 15.000 / Win</span></div>
+                        </div>
+                    </div>
+                    <a href="#order" onclick="setMLBBService('joki_gendong')" class="w-full py-2.5 text-center bg-cyan-600 hover:bg-cyan-500 font-bold text-xs rounded-xl text-white transition-all">Order Classic / Mabar</a>
+                </div>
+            </div>
+
+            <!-- Stick War Price Container -->
+            <div id="stickwarPriceContainer" class="hidden grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- Campaign Mode Card -->
+                <div class="glass-card rounded-2xl p-6 border border-gray-800 flex flex-col justify-between hover:border-amber-500/50 transition-all">
+                    <div>
+                        <div class="flex justify-between items-start mb-4">
+                            <div>
+                                <h3 class="text-lg font-extrabold text-white">Campaign Clear</h3>
+                                <p class="text-xs text-gray-400">Tamat Story / Stage Inamorta</p>
+                            </div>
+                            <span class="bg-amber-500/20 text-amber-300 text-[10px] font-bold px-2 py-0.5 rounded border border-amber-500/30">Story Mode</span>
+                        </div>
+                        <div class="space-y-2.5 my-4 border-y border-gray-800 py-4 text-xs text-gray-300">
+                            <div class="flex justify-between"><span>Campaign Normal Full Clear</span> <span class="font-bold text-amber-400">Rp 25.000</span></div>
+                            <div class="flex justify-between"><span>Campaign Hard Full Clear</span> <span class="font-bold text-amber-400">Rp 45.000</span></div>
+                            <div class="flex justify-between"><span>Campaign Insane Full Clear</span> <span class="font-bold text-amber-400">Rp 75.000</span></div>
+                            <div class="flex justify-between"><span>1 Stage Request Insane</span> <span class="font-bold text-amber-400">Rp 5.000 / Stage</span></div>
+                        </div>
+                    </div>
+                    <a href="#order" onclick="setSWService('sw_campaign')" class="w-full py-2.5 text-center bg-amber-500 hover:bg-amber-400 font-black text-xs rounded-xl text-slate-950 transition-all">Order Campaign Mode</a>
+                </div>
+
+                <!-- Arena Push Card -->
+                <div class="glass-card rounded-2xl p-6 border-2 border-red-500/80 flex flex-col justify-between glow-red">
+                    <div>
+                        <div class="flex justify-between items-start mb-4">
+                            <div>
+                                <h3 class="text-lg font-extrabold text-white">Arena PvP Rank</h3>
+                                <p class="text-xs text-gray-400">Push Leaderboard Arena</p>
+                            </div>
+                            <span class="bg-red-500 text-white font-black text-[10px] px-2 py-0.5 rounded uppercase">PvP Recommended</span>
+                        </div>
+                        <div class="space-y-2.5 my-4 border-y border-gray-800 py-4 text-xs text-gray-300">
+                            <div class="flex justify-between"><span>Bronze ➔ Silver</span> <span class="font-bold text-amber-400">Rp 20.000</span></div>
+                            <div class="flex justify-between"><span>Silver ➔ Gold</span> <span class="font-bold text-amber-400">Rp 35.000</span></div>
+                            <div class="flex justify-between"><span>Gold ➔ Platinum</span> <span class="font-bold text-amber-400">Rp 55.000</span></div>
+                            <div class="flex justify-between"><span>Platinum ➔ Grandmaster</span> <span class="font-bold text-amber-400">Rp 85.000</span></div>
+                            <div class="flex justify-between"><span>Per 100 Arena Stars</span> <span class="font-bold text-amber-400">Rp 15.000</span></div>
+                        </div>
+                    </div>
+                    <a href="#order" onclick="setSWService('sw_arena')" class="w-full py-2.5 text-center bg-red-600 hover:bg-red-500 font-black text-xs rounded-xl text-white transition-all">Order Arena PvP</a>
+                </div>
+
+                <!-- Gems & Cards Farming Card -->
+                <div class="glass-card rounded-2xl p-6 border border-gray-800 flex flex-col justify-between hover:border-cyan-500/50 transition-all">
+                    <div>
+                        <div class="flex justify-between items-start mb-4">
+                            <div>
+                                <h3 class="text-lg font-extrabold text-white">Gems & Army Unlock</h3>
+                                <p class="text-xs text-gray-400">Gems, Gold & Card Mastery</p>
+                            </div>
+                            <span class="bg-cyan-500/20 text-cyan-300 text-[10px] font-bold px-2 py-0.5 rounded border border-cyan-500/30">Resource</span>
+                        </div>
+                        <div class="space-y-2.5 my-4 border-y border-gray-800 py-4 text-xs text-gray-300">
+                            <div class="flex justify-between"><span>Farming 5,000 Gems</span> <span class="font-bold text-amber-400">Rp 30.000</span></div>
+                            <div class="flex justify-between"><span>Farming 15,000 Gems</span> <span class="font-bold text-amber-400">Rp 70.000</span></div>
+                            <div class="flex justify-between"><span>Unlock All Spearton Cards</span> <span class="font-bold text-amber-400">Rp 40.000</span></div>
+                            <div class="flex justify-between"><span>Full Stat Army Max Upgrade</span> <span class="font-bold text-amber-400">Rp 50.000</span></div>
+                        </div>
+                    </div>
+                    <a href="#order" onclick="setSWService('sw_farming')" class="w-full py-2.5 text-center bg-cyan-600 hover:bg-cyan-500 font-bold text-xs rounded-xl text-white transition-all">Order Farming Gems</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="order" class="py-16 relative">
+        <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-8">
+                <span class="text-amber-400 text-xs font-bold tracking-widest uppercase">Pemesanan Instan</span>
+                <h2 class="text-2xl sm:text-3xl font-black text-white mt-1">Form Order Joki Game</h2>
+                <p class="text-gray-400 text-xs sm:text-sm mt-1">Pilih game, isi data akun, dan harga akan dihitung secara otomatis.</p>
+            </div>
+
+            <form id="jokiOrderForm" onsubmit="event.preventDefault();" class="glass-card p-5 sm:p-8 rounded-3xl border border-gray-700 space-y-6 shadow-2xl">
+                
+                <!-- STEP 1: PILIH GAME -->
+                <div class="space-y-3">
+                    <div class="flex items-center gap-3 pb-2 border-b border-gray-800">
+                        <span class="w-7 h-7 rounded-lg bg-amber-500/20 text-amber-400 font-extrabold flex items-center justify-center text-xs">1</span>
+                        <h3 class="text-base font-bold text-white">Pilih Game Yang Ingin Di-Joki</h3>
+                    </div>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                        <button type="button" onclick="selectGameMode('mlbb')" id="gameBtnMLBB" class="p-3.5 rounded-2xl border-2 border-purple-500 bg-purple-950/40 text-left transition-all flex items-center gap-3">
+                            <div class="w-10 h-10 rounded-xl bg-purple-600 flex items-center justify-center text-white text-lg font-bold">
+                                <i class="fa-solid fa-crown"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-extrabold text-white text-sm">Mobile Legends</h4>
+                                <p class="text-[11px] text-gray-400">Push Rank, Star, Mabar Classic</p>
+                            </div>
+                        </button>
+
+                        <button type="button" onclick="selectGameMode('stickwar')" id="gameBtnStickWar" class="p-3.5 rounded-2xl border border-gray-700 bg-brand-dark/60 text-left transition-all flex items-center gap-3">
+                            <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-amber-600 to-red-700 flex items-center justify-center p-0.5 border border-amber-400/60 overflow-hidden shrink-0 shadow">
+                                <svg viewBox="0 0 200 200" class="w-full h-full rounded-lg" xmlns="http://www.w3.org/2000/svg">
+                                    <rect width="200" height="200" fill="#991B1B" />
+                                    <path d="M 25 200 L 25 35 Q 25 20 40 20 L 50 20 L 50 200 Z" fill="#d97706" stroke="#18181b" stroke-width="4" />
+                                    <path d="M 175 200 L 175 35 Q 175 20 160 20 L 150 20 L 150 200 Z" fill="#d97706" stroke="#18181b" stroke-width="4" />
+                                    <rect x="50" y="40" width="100" height="160" fill="#7f1d1d" stroke="#18181b" stroke-width="3" />
+                                    <path d="M 30 200 Q 30 130 100 130 Q 170 130 170 200 Z" fill="#dc2626" stroke="#18181b" stroke-width="4" />
+                                    <path d="M 135 135 L 158 100 L 162 65" stroke="#18181b" stroke-width="14" stroke-linecap="round" />
+                                    <path d="M 162 65 L 155 48 M 162 65 L 163 45 M 162 65 L 170 48 M 162 65 L 175 55" stroke="#18181b" stroke-width="4" stroke-linecap="round" />
+                                    <path d="M 50 142 C 50 115 150 115 150 142 Z" fill="#f8fafc" stroke="#18181b" stroke-width="4" />
+                                    <circle cx="100" cy="90" r="32" fill="#18181b" />
+                                    <ellipse cx="86" cy="85" rx="7" ry="5" fill="#ffffff" />
+                                    <circle cx="86" cy="86" r="2.5" fill="#18181b" />
+                                    <path d="M 78 84 Q 86 89 94 84" stroke="#18181b" stroke-width="3" fill="#18181b" />
+                                    <ellipse cx="114" cy="85" rx="7" ry="5" fill="#ffffff" />
+                                    <circle cx="114" cy="86" r="2.5" fill="#18181b" />
+                                    <path d="M 106 84 Q 114 89 122 84" stroke="#18181b" stroke-width="3" fill="#18181b" />
+                                    <path d="M 72 100 Q 100 132 128 100 Q 100 108 72 100 Z" fill="#e2e8f0" stroke="#18181b" stroke-width="3" />
+                                    <path d="M 68 62 C 68 38 132 38 132 62 Z" fill="#991b1b" stroke="#18181b" stroke-width="3" />
+                                    <path d="M 62 65 L 62 38 L 80 52 L 100 24 L 120 52 L 138 38 L 138 65 Z" fill="#f59e0b" stroke="#18181b" stroke-width="3.5" />
+                                    <circle cx="100" cy="24" r="4" fill="#06b6d4" stroke="#18181b" stroke-width="2" />
+                                </svg>
+                            </div>
+                            <div>
+                                <h4 class="font-extrabold text-white text-sm">Stick War: Saga</h4>
+                                <p class="text-[11px] text-gray-400">Campaign Insane, Arena, Gems</p>
+                            </div>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- STEP 2: DATA AKUN (MLBB vs STICK WAR) -->
+                <div class="space-y-3">
+                    <div class="flex items-center gap-3 pb-2 border-b border-gray-800">
+                        <span class="w-7 h-7 rounded-lg bg-purple-500/20 text-purple-400 font-extrabold flex items-center justify-center text-xs">2</span>
+                        <h3 class="text-base font-bold text-white">Data Akun Game</h3>
+                    </div>
+
+                    <!-- MLBB Account Form Inputs -->
+                    <div id="mlbbAccountInputs" class="space-y-3">
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                            <div>
+                                <label class="block text-xs font-semibold text-gray-300 mb-1">User ID & Zone ID <span class="text-red-400">*</span></label>
+                                <div class="grid grid-cols-3 gap-2">
+                                    <input type="text" id="mlUserId" placeholder="12345678" class="col-span-2 bg-brand-dark border border-gray-700 rounded-xl px-3 py-2.5 text-xs text-white focus:outline-none focus:border-amber-400">
+                                    <input type="text" id="mlZoneId" placeholder="(1234)" class="bg-brand-dark border border-gray-700 rounded-xl px-2.5 py-2.5 text-xs text-white focus:outline-none focus:border-amber-400">
+                                </div>
+                            </div>
+
+                            <div>
+                                <label class="block text-xs font-semibold text-gray-300 mb-1">Tipe Login MLBB <span class="text-red-400">*</span></label>
+                                <select id="mlLoginType" class="w-full bg-brand-dark border border-gray-700 rounded-xl px-3 py-2.5 text-xs text-white focus:outline-none focus:border-amber-400">
+                                    <option value="Moonton">Moonton ID</option>
+                                    <option value="VK">VK Account</option>
+                                    <option value="Facebook">Facebook</option>
+                                    <option value="TikTok">TikTok</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                            <div>
+                                <label class="block text-xs font-semibold text-gray-300 mb-1">Email / No HP Login <span class="text-red-400">*</span></label>
+                                <input type="text" id="mlAccountEmail" placeholder="Email / No HP login ML" class="w-full bg-brand-dark border border-gray-700 rounded-xl px-3 py-2.5 text-xs text-white focus:outline-none focus:border-amber-400">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-semibold text-gray-300 mb-1">Password Akun MLBB <span class="text-red-400">*</span></label>
+                                <input type="password" id="mlAccountPassword" placeholder="Password akun ML" class="w-full bg-brand-dark border border-gray-700 rounded-xl px-3 py-2.5 text-xs text-white focus:outline-none focus:border-amber-400">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Stick War Saga Account Form Inputs -->
+                    <div id="stickwarAccountInputs" class="hidden space-y-3">
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                            <div>
+                                <label class="block text-xs font-semibold text-gray-300 mb-1">IGN / Player Code <span class="text-red-400">*</span></label>
+                                <input type="text" id="swPlayerId" placeholder="Contoh: SpeartonKing #1290" class="w-full bg-brand-dark border border-gray-700 rounded-xl px-3 py-2.5 text-xs text-white focus:outline-none focus:border-amber-400">
+                            </div>
+
+                            <div>
+                                <label class="block text-xs font-semibold text-gray-300 mb-1">Metode Login Stick War <span class="text-red-400">*</span></label>
+                                <select id="swLoginType" class="w-full bg-brand-dark border border-gray-700 rounded-xl px-3 py-2.5 text-xs text-white focus:outline-none focus:border-amber-400">
+                                    <option value="Google Play Games">Google Play Games</option>
+                                    <option value="In-Game Account">In-Game Account / Email</option>
+                                    <option value="Apple ID">Apple ID (iOS)</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                            <div>
+                                <label class="block text-xs font-semibold text-gray-300 mb-1">Email Login Game <span class="text-red-400">*</span></label>
+                                <input type="text" id="swAccountEmail" placeholder="Email login Google / Game" class="w-full bg-brand-dark border border-gray-700 rounded-xl px-3 py-2.5 text-xs text-white focus:outline-none focus:border-amber-400">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-semibold text-gray-300 mb-1">Password Akun <span class="text-red-400">*</span></label>
+                                <input type="password" id="swAccountPassword" placeholder="Password akun" class="w-full bg-brand-dark border border-gray-700 rounded-xl px-3 py-2.5 text-xs text-white focus:outline-none focus:border-amber-400">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- STEP 3: LAYANAN & TARGET -->
+                <div class="space-y-3">
+                    <div class="flex items-center gap-3 pb-2 border-b border-gray-800">
+                        <span class="w-7 h-7 rounded-lg bg-cyan-500/20 text-cyan-400 font-extrabold flex items-center justify-center text-xs">3</span>
+                        <h3 class="text-base font-bold text-white">Pilih Layanan & Target Joki</h3>
+                    </div>
+
+                    <!-- MLBB Service Selector -->
+                    <div id="mlbbServiceWrapper" class="space-y-3">
+                        <div class="grid grid-cols-2 sm:grid-cols-4 gap-2">
+                            <button type="button" onclick="setMLBBService('per_bintang')" id="btnML-per_bintang" class="ml-btn p-2.5 rounded-xl border border-amber-500 bg-brand-card text-center transition-all">
+                                <i class="fa-solid fa-star text-amber-400 text-sm mb-1 block"></i>
+                                <span class="text-[11px] font-bold text-white block">Per Bintang</span>
+                            </button>
+                            <button type="button" onclick="setMLBBService('paket_rank')" id="btnML-paket_rank" class="ml-btn p-2.5 rounded-xl border border-gray-700 bg-brand-dark text-center transition-all">
+                                <i class="fa-solid fa-layer-group text-purple-400 text-sm mb-1 block"></i>
+                                <span class="text-[11px] font-bold text-white block">Paket Rank</span>
+                            </button>
+                            <button type="button" onclick="setMLBBService('joki_classic')" id="btnML-joki_classic" class="ml-btn p-2.5 rounded-xl border border-gray-700 bg-brand-dark text-center transition-all">
+                                <i class="fa-solid fa-shield text-cyan-400 text-sm mb-1 block"></i>
+                                <span class="text-[11px] font-bold text-white block">Classic WR</span>
+                            </button>
+                            <button type="button" onclick="setMLBBService('joki_gendong')" id="btnML-joki_gendong" class="ml-btn p-2.5 rounded-xl border border-gray-700 bg-brand-dark text-center transition-all">
+                                <i class="fa-solid fa-users text-emerald-400 text-sm mb-1 block"></i>
+                                <span class="text-[11px] font-bold text-white block">Joki Gendong</span>
+                            </button>
+                        </div>
+
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 bg-brand-dark/50 p-3.5 rounded-2xl border border-gray-800">
+                            <div>
+                                <label class="block text-xs font-semibold text-gray-300 mb-1">Rank Awal Saat Ini</label>
+                                <select id="mlStartRank" onchange="calculateTotal()" class="w-full bg-brand-card border border-gray-700 rounded-xl px-3 py-2.5 text-xs text-white focus:outline-none focus:border-amber-400">
+                                    <option value="grandmaster">Grandmaster</option>
+                                    <option value="epic" selected>Epic</option>
+                                    <option value="legend">Legend</option>
+                                    <option value="mythic">Mythic (1-25 Star)</option>
+                                    <option value="honor">Mythic Honor (26-50 Star)</option>
+                                    <option value="glory">Mythic Glory (50-100 Star)</option>
+                                </select>
+                            </div>
+
+                            <div id="mlTargetRankWrapper">
+                                <label class="block text-xs font-semibold text-gray-300 mb-1">Jumlah Bintang Target</label>
+                                <input type="number" id="mlStarCount" min="1" max="100" value="5" onchange="calculateTotal()" onkeyup="calculateTotal()" class="w-full bg-brand-card border border-gray-700 rounded-xl px-3 py-2.5 text-xs text-white focus:outline-none focus:border-amber-400">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Stick War Saga Service Selector -->
+                    <div id="stickwarServiceWrapper" class="hidden space-y-3">
+                        <div class="grid grid-cols-1 sm:grid-cols-3 gap-2">
+                            <button type="button" onclick="setSWService('sw_campaign')" id="btnSW-sw_campaign" class="sw-btn p-2.5 rounded-xl border border-amber-500 bg-brand-card text-center transition-all">
+                                <i class="fa-solid fa-map-location-dot text-amber-400 text-sm mb-1 block"></i>
+                                <span class="text-[11px] font-bold text-white block">Campaign Mode</span>
+                            </button>
+                            <button type="button" onclick="setSWService('sw_arena')" id="btnSW-sw_arena" class="sw-btn p-2.5 rounded-xl border border-gray-700 bg-brand-dark text-center transition-all">
+                                <i class="fa-solid fa-trophy text-red-400 text-sm mb-1 block"></i>
+                                <span class="text-[11px] font-bold text-white block">Arena PvP Push</span>
+                            </button>
+                            <button type="button" onclick="setSWService('sw_farming')" id="btnSW-sw_farming" class="sw-btn p-2.5 rounded-xl border border-gray-700 bg-brand-dark text-center transition-all">
+                                <i class="fa-solid fa-gem text-cyan-400 text-sm mb-1 block"></i>
+                                <span class="text-[11px] font-bold text-white block">Farming Gems/Cards</span>
+                            </button>
+                        </div>
+
+                        <div class="bg-brand-dark/50 p-3.5 rounded-2xl border border-gray-800">
+                            <label class="block text-xs font-semibold text-gray-300 mb-1">Pilih Paket Stick War Saga</label>
+                            <select id="swPackageSelect" onchange="calculateTotal()" class="w-full bg-brand-card border border-gray-700 rounded-xl px-3 py-2.5 text-xs text-white focus:outline-none focus:border-amber-400">
+                                <!-- Options dynamically generated -->
+                            </select>
+                        </div>
+                    </div>
+
+                    <!-- Notes -->
+                    <div>
+                        <label class="block text-xs font-semibold text-gray-300 mb-1">Catatan Khusus / Request Hero (Opsional)</label>
+                        <textarea id="orderNotes" rows="2" placeholder="Contoh: Request Hero Ling (MLBB) / Formasi Spearton & Magikill (Stick War)" class="w-full bg-brand-dark border border-gray-700 rounded-xl px-3 py-2 text-xs text-white focus:outline-none focus:border-amber-400"></textarea>
+                    </div>
+                </div>
+
+                <!-- STEP 4: PEMBAYARAN -->
+                <div class="space-y-3">
+                    <div class="flex items-center gap-3 pb-2 border-b border-gray-800">
+                        <span class="w-7 h-7 rounded-lg bg-emerald-500/20 text-emerald-400 font-extrabold flex items-center justify-center text-xs">4</span>
+                        <h3 class="text-base font-bold text-white">Metode Pembayaran</h3>
+                    </div>
+
+                    <div class="grid grid-cols-2 sm:grid-cols-3 gap-2">
+                        <label class="cursor-pointer">
+                            <input type="radio" name="payment" value="QRIS" checked onchange="calculateTotal()" class="peer hidden">
+                            <div class="p-2.5 rounded-xl border border-gray-700 bg-brand-dark text-center peer-checked:border-amber-400 peer-checked:bg-amber-400/10 transition-all">
+                                <i class="fa-solid fa-qrcode text-amber-400 text-lg mb-0.5 block"></i>
+                                <span class="text-[11px] font-bold text-white block">QRIS (E-Wallet)</span>
+                            </div>
+                        </label>
+                        <label class="cursor-pointer">
+                            <input type="radio" name="payment" value="DANA" onchange="calculateTotal()" class="peer hidden">
+                            <div class="p-2.5 rounded-xl border border-gray-700 bg-brand-dark text-center peer-checked:border-amber-400 peer-checked:bg-amber-400/10 transition-all">
+                                <i class="fa-solid fa-wallet text-cyan-400 text-lg mb-0.5 block"></i>
+                                <span class="text-[11px] font-bold text-white block">DANA</span>
+                            </div>
+                        </label>
+                        <label class="cursor-pointer">
+                            <input type="radio" name="payment" value="GoPay" onchange="calculateTotal()" class="peer hidden">
+                            <div class="p-2.5 rounded-xl border border-gray-700 bg-brand-dark text-center peer-checked:border-amber-400 peer-checked:bg-amber-400/10 transition-all">
+                                <i class="fa-solid fa-mobile-screen text-emerald-400 text-lg mb-0.5 block"></i>
+                                <span class="text-[11px] font-bold text-white block">GoPay</span>
+                            </div>
+                        </label>
+                        <label class="cursor-pointer">
+                            <input type="radio" name="payment" value="OVO" onchange="calculateTotal()" class="peer hidden">
+                            <div class="p-2.5 rounded-xl border border-gray-700 bg-brand-dark text-center peer-checked:border-amber-400 peer-checked:bg-amber-400/10 transition-all">
+                                <i class="fa-solid fa-coins text-purple-400 text-lg mb-0.5 block"></i>
+                                <span class="text-[11px] font-bold text-white block">OVO</span>
+                            </div>
+                        </label>
+                        <label class="cursor-pointer">
+                            <input type="radio" name="payment" value="ShopeePay" onchange="calculateTotal()" class="peer hidden">
+                            <div class="p-2.5 rounded-xl border border-gray-700 bg-brand-dark text-center peer-checked:border-amber-400 peer-checked:bg-amber-400/10 transition-all">
+                                <i class="fa-solid fa-bag-shopping text-orange-400 text-lg mb-0.5 block"></i>
+                                <span class="text-[11px] font-bold text-white block">ShopeePay</span>
+                            </div>
+                        </label>
+                        <label class="cursor-pointer">
+                            <input type="radio" name="payment" value="Transfer Bank" onchange="calculateTotal()" class="peer hidden">
+                            <div class="p-2.5 rounded-xl border border-gray-700 bg-brand-dark text-center peer-checked:border-amber-400 peer-checked:bg-amber-400/10 transition-all">
+                                <i class="fa-solid fa-building-columns text-blue-400 text-lg mb-0.5 block"></i>
+                                <span class="text-[11px] font-bold text-white block">Transfer Bank</span>
+                            </div>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Error Notification Box -->
+                <div id="formErrorBox" class="hidden p-3 rounded-xl bg-red-950/80 border border-red-500/50 text-red-300 text-xs flex items-center gap-2">
+                    <i class="fa-solid fa-circle-exclamation text-base text-red-400 flex-shrink-0"></i>
+                    <span id="formErrorMessage">Lengkapi data formulir terlebih dahulu!</span>
+                </div>
+
+                <div class="bg-gradient-to-r from-purple-950/60 via-brand-card to-brand-dark p-5 rounded-2xl border border-purple-500/30 space-y-4">
+                    <div class="flex flex-col sm:flex-row justify-between sm:items-center gap-2">
+                        <div>
+                            <span class="text-xs text-gray-400 block">Game Selected:</span>
+                            <span id="selectedGameLabel" class="text-xs font-bold text-purple-400">Mobile Legends: Bang Bang</span>
+                            <span id="estimatedTime" class="text-xs font-bold text-cyan-400 block mt-0.5"><i class="fa-solid fa-clock mr-1"></i> Estimasi: 1 - 3 Jam</span>
+                        </div>
+                        <div class="text-left sm:text-right">
+                            <span class="text-xs text-gray-400 block">Total Pembayaran:</span>
+                            <span id="totalPrice" class="text-2xl sm:text-3xl font-black text-amber-400">Rp 25.000</span>
+                        </div>
+                    </div>
+
+                    <button type="button" onclick="submitOrderWhatsApp()" class="w-full py-3.5 rounded-xl bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-black text-sm transition-all flex items-center justify-center gap-2 shadow-lg glow-gold">
+                        <i class="fa-brands fa-whatsapp text-xl"></i> Kirim Order via WhatsApp
+                    </button>
+                    <p class="text-[10px] text-center text-gray-400">Pesan otomatis akan diarahkan ke WhatsApp Admin: 085697038578</p>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <section id="testimoni" class="py-16 bg-brand-card/30 border-t border-gray-800/80">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-10">
+                <span class="text-purple-400 text-xs font-bold tracking-widest uppercase">Testimoni Real</span>
+                <h2 class="text-2xl sm:text-3xl font-black text-white mt-1">Ulasan Pelanggan</h2>
+                <p class="text-gray-400 text-xs sm:text-sm mt-1">Pengalaman gamer yang berlangganan joki di toko kami.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="glass-card p-5 rounded-2xl space-y-3">
+                    <div class="flex items-center gap-1 text-amber-400 text-xs">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="text-gray-300 text-xs italic">"Joki MLBB kilat banget! Epic ke Mythic dalam sehari beres. Hero request Ling dipake winrate naik tajam. Recomended!"</p>
+                    <div class="flex items-center gap-3 pt-2 border-t border-gray-800">
+                        <div class="w-8 h-8 rounded-full bg-purple-600/30 flex items-center justify-center font-bold text-xs text-purple-300">B</div>
+                        <div>
+                            <p class="text-xs font-bold text-white">Borman Garsia</p>
+                            <p class="text-[10px] text-purple-400">Mobile Legends • Epic ➔ Mythic</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="glass-card p-5 rounded-2xl space-y-3 border border-amber-500/20">
+                    <div class="flex items-center gap-1 text-amber-400 text-xs">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="text-gray-300 text-xs italic">"Stuck di Campaign Insane Stick War Saga berbulan-bulan, pas di-joki admin cuma butuh waktu 2 jam langsung beres tamat!"</p>
+                    <div class="flex items-center gap-3 pt-2 border-t border-gray-800">
+                        <div class="w-8 h-8 rounded-full bg-gradient-to-tr from-amber-500 to-red-600 flex items-center justify-center p-0.5 border border-amber-400 overflow-hidden shrink-0 shadow">
+                            <svg viewBox="0 0 200 200" class="w-full h-full rounded-full">
+                                <rect width="200" height="200" fill="#991B1B" />
+                                <path d="M 30 200 Q 30 130 100 130 Q 170 130 170 200 Z" fill="#dc2626" />
+                                <circle cx="100" cy="90" r="32" fill="#18181b" />
+                                <ellipse cx="86" cy="85" rx="7" ry="5" fill="#ffffff" />
+                                <path d="M 78 84 Q 86 89 94 84" fill="#18181b" />
+                                <ellipse cx="114" cy="85" rx="7" ry="5" fill="#ffffff" />
+                                <path d="M 106 84 Q 114 89 122 84" fill="#18181b" />
+                                <path d="M 72 100 Q 100 132 128 100 Q 100 108 72 100 Z" fill="#e2e8f0" />
+                                <path d="M 68 62 C 68 38 132 38 132 62 Z" fill="#991b1b" />
+                                <path d="M 62 65 L 62 38 L 80 52 L 100 24 L 120 52 L 138 38 L 138 65 Z" fill="#f59e0b" />
+                                <circle cx="100" cy="24" r="4" fill="#06b6d4" />
+                            </svg>
+                        </div>
+                        <div>
+                            <p class="text-xs font-bold text-white">Awal Bahr</p>
+                            <p class="text-[10px] text-amber-400">Stick War Saga • Insane Clear</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="glass-card p-5 rounded-2xl space-y-3">
+                    <div class="flex items-center gap-1 text-amber-400 text-xs">
+                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="text-gray-300 text-xs italic">"Order Arena Stars Stick War dan Joki Classic MLBB. Adminnya ramah, fast response jam 1 malam tetep diproses."</p>
+                    <div class="flex items-center gap-3 pt-2 border-t border-gray-800">
+                        <div class="w-8 h-8 rounded-full bg-cyan-600/30 flex items-center justify-center font-bold text-xs text-cyan-300">S</div>
+                        <div>
+                            <p class="text-xs font-bold text-white">Stefen Irfan</p>
+                            <p class="text-[10px] text-cyan-400">Arena PvP & ML Classic</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- GAME GALLERY / SHOWCASE SECTION -->
+    <section id="galeri-game" class="py-16 border-t border-gray-800/80 bg-brand-dark relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center max-w-2xl mx-auto mb-10">
+                <span class="text-amber-400 text-xs font-bold tracking-widest uppercase">Visual Preview</span>
+                <h2 class="text-2xl sm:text-3xl font-black text-white mt-1">Galeri Visual Game</h2>
+                <p class="text-gray-400 text-xs sm:text-sm mt-1">Karakter dan mode game Stick War: Saga & Mobile Legends yang kami dukung.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                
+                <!-- Stick War Saga Game Art Showcase (Based on uploaded image) -->
+                <div class="glass-card p-6 rounded-3xl border border-amber-500/40 relative overflow-hidden group hover:border-amber-400 transition-all shadow-2xl">
+                    <div class="absolute -right-12 -bottom-12 w-48 h-48 bg-amber-500/10 rounded-full blur-3xl pointer-events-none"></div>
+                    
+                    <div class="flex items-center justify-between mb-4">
+                        <div class="flex items-center gap-2">
+                            <span class="w-3 h-3 rounded-full bg-amber-400 animate-ping"></span>
+                            <h3 class="text-lg font-black text-white">Stick War: Saga Trio Army</h3>
+                        </div>
+                        <span class="text-[10px] font-extrabold bg-amber-500/20 text-amber-300 px-2.5 py-1 rounded-full border border-amber-500/30">
+                            OFFICIAL ART
+                        </span>
+                    </div>
+
+                    <!-- SVG Illustration recreating Stick War Trio: Spearton, Archidon, Magikill with Yellow Sunburst background -->
+                    <div class="w-full h-64 sm:h-72 rounded-2xl bg-slate-900 overflow-hidden relative border border-gray-800 flex items-center justify-center">
+                        <svg viewBox="0 0 500 500" class="w-full h-full object-cover" xmlns="http://www.w3.org/2000/svg">
+                            <!-- Background Dark Realm -->
+                            <rect width="500" height="500" fill="#0b0f19" />
+                            
+                            <!-- Yellow Emblem Sunburst Circle (from image) -->
+                            <circle cx="250" cy="250" r="190" fill="#facc15" stroke="#ca8a04" stroke-width="8" />
+                            <circle cx="250" cy="250" r="175" fill="#fef08a" opacity="0.4" />
+
+                            <!-- MAGIKILL (Wizard on Right) -->
+                            <g id="magikill">
+                                <!-- Purple Aura -->
+                                <circle cx="350" cy="220" r="75" fill="#a855f7" opacity="0.35" filter="blur(10px)" />
+                                <path d="M 330 240 Q 370 190 390 230 Q 340 260 330 240 Z" fill="#9333ea" opacity="0.6" />
+                                <!-- Staff -->
+                                <line x1="430" y1="50" x2="350" y2="460" stroke="#78350f" stroke-width="14" stroke-linecap="round" />
+                                <line x1="430" y1="50" x2="350" y2="460" stroke="#1c1917" stroke-width="8" stroke-linecap="round" />
+                                <circle cx="430" cy="50" r="16" fill="#a855f7" stroke="#18181b" stroke-width="4" />
+                                <circle cx="430" cy="50" r="8" fill="#e9d5ff" />
+                                <!-- Body & Arm -->
+                                <path d="M 320 230 L 400 170" stroke="#18181b" stroke-width="18" stroke-linecap="round" />
+                                <path d="M 340 250 L 320 400" stroke="#18181b" stroke-width="20" stroke-linecap="round" />
+                                <!-- Wizard Head -->
+                                <circle cx="340" cy="180" r="30" fill="#18181b" />
+                                <path d="M 325 170 Q 335 178 340 170" stroke="#ffffff" stroke-width="4" fill="none" />
+                                <path d="M 350 170 Q 360 178 365 170" stroke="#ffffff" stroke-width="4" fill="none" />
+                                <!-- Wizard Beard -->
+                                <path d="M 320 185 Q 340 240 360 185 Z" fill="#9ca3af" stroke="#18181b" stroke-width="3" />
+                                <!-- Wizard Pointed Hat -->
+                                <path d="M 280 180 L 340 70 L 400 180 Z" fill="#312e81" stroke="#18181b" stroke-width="5" stroke-linejoin="round" />
+                                <path d="M 270 180 Q 340 170 410 180 L 390 190 Q 340 180 290 190 Z" fill="#1e1b4b" stroke="#18181b" stroke-width="4" />
+                            </g>
+
+                            <!-- ARCHIDON (Archer Stickman on Left) -->
+                            <g id="archidon">
+                                <!-- Wooden Bow -->
+                                <path d="M 80 80 Q 210 230 110 380" stroke="#78350f" stroke-width="12" fill="none" stroke-linecap="round" />
+                                <path d="M 80 80 Q 210 230 110 380" stroke="#451a03" stroke-width="6" fill="none" stroke-linecap="round" />
+                                <line x1="80" y1="80" x2="110" y2="380" stroke="#e2e8f0" stroke-width="2.5" />
+                                <!-- Arrow -->
+                                <line x1="70" y1="210" x2="230" y2="210" stroke="#18181b" stroke-width="6" />
+                                <polygon points="230,210 210,200 210,220" fill="#9ca3af" stroke="#18181b" stroke-width="2" />
+                                <!-- Quiver Feather -->
+                                <path d="M 120 280 L 100 350" stroke="#78350f" stroke-width="14" />
+                                <!-- Arm Drawing Bow -->
+                                <path d="M 170 230 L 100 210 M 170 230 L 75 210" stroke="#18181b" stroke-width="16" stroke-linecap="round" stroke-linejoin="round" />
+                                <!-- Archer Body -->
+                                <path d="M 170 230 L 160 380" stroke="#18181b" stroke-width="22" stroke-linecap="round" />
+                                <!-- Archer Head & Eyes -->
+                                <circle cx="180" cy="180" r="32" fill="#18181b" />
+                                <ellipse cx="168" cy="176" rx="8" ry="6" fill="#ffffff" />
+                                <circle cx="168" cy="177" r="3" fill="#18181b" />
+                                <ellipse cx="192" cy="176" rx="8" ry="6" fill="#ffffff" />
+                                <circle cx="192" cy="177" r="3" fill="#18181b" />
+                                <path d="M 160 166 L 175 172" stroke="#18181b" stroke-width="4" />
+                                <path d="M 200 166 L 185 172" stroke="#18181b" stroke-width="4" />
+                            </g>
+
+                            <!-- SPEARTON (Center Spartan Warrior in Front) -->
+                            <g id="spearton">
+                                <!-- Red Cape -->
+                                <path d="M 180 480 Q 250 280 340 480 Z" fill="#dc2626" stroke="#18181b" stroke-width="5" />
+                                
+                                <!-- Spear Pole -->
+                                <line x1="470" y1="20" x2="380" y2="490" stroke="#18181b" stroke-width="12" stroke-linecap="round" />
+                                <polygon points="470,20 450,60 485,50" fill="#9ca3af" stroke="#18181b" stroke-width="4" />
+
+                                <!-- Shield -->
+                                <ellipse cx="150" cy="380" rx="75" ry="65" fill="#64748b" stroke="#18181b" stroke-width="7" />
+                                <ellipse cx="150" cy="380" rx="55" ry="45" fill="#475569" stroke="#18181b" stroke-width="4" />
+
+                                <!-- Main Arm & Body -->
+                                <path d="M 250 320 L 250 490" stroke="#18181b" stroke-width="28" stroke-linecap="round" />
+                                <path d="M 250 330 L 170 370" stroke="#18181b" stroke-width="20" stroke-linecap="round" />
+                                <path d="M 250 330 L 410 200" stroke="#18181b" stroke-width="20" stroke-linecap="round" />
+
+                                <!-- Spartan Helmet & Plume -->
+                                <!-- Red Crest / Plume -->
+                                <path d="M 230 190 Q 250 90 270 190 Z" fill="#ef4444" stroke="#18181b" stroke-width="5" />
+                                <path d="M 250 100 L 250 190" stroke="#b91c1c" stroke-width="4" />
+                                <path d="M 230 110 L 270 110" stroke="#f59e0b" stroke-width="8" stroke-linecap="round" />
+                                
+                                <!-- Metallic Helmet -->
+                                <path d="M 200 200 C 200 130 300 130 300 200 L 300 280 C 270 300 230 300 200 280 Z" fill="#e2e8f0" stroke="#18181b" stroke-width="7" />
+                                <!-- Eye T-slit Visor -->
+                                <path d="M 210 220 L 290 220 L 290 240 L 260 240 L 260 285 L 240 285 L 240 240 L 210 240 Z" fill="#18181b" />
+                                <!-- Angry Eyes in Helmet -->
+                                <polygon points="220,226 242,234 220,236" fill="#ffffff" />
+                                <polygon points="280,226 258,234 280,236" fill="#ffffff" />
+                                <!-- Mouth Guard / Open Screaming Mouth -->
+                                <ellipse cx="250" cy="265" rx="14" ry="10" fill="#991b1b" stroke="#18181b" stroke-width="3" />
+                                <path d="M 242 260 L 258 260" stroke="#ffffff" stroke-width="3" />
+                                <!-- Battle Scar on Helmet -->
+                                <line x1="225" y1="180" x2="235" y2="230" stroke="#991b1b" stroke-width="4" stroke-linecap="round" />
+                            </g>
+                        </svg>
+                        
+                        <div class="absolute bottom-3 left-3 right-3 bg-slate-950/80 backdrop-blur-md px-3 py-2 rounded-xl border border-gray-700 flex justify-between items-center text-xs">
+                            <span class="font-bold text-amber-400"><i class="fa-solid fa-shield-halved mr-1"></i> Spearton, Archidon & Magikill</span>
+                            <span class="text-gray-400 text-[10px]">Stick War: Saga</span>
+                        </div>
+                    </div>
+
+                    <p class="text-xs text-gray-300 mt-4 leading-relaxed">
+                        Siap push Campaign Insane & Leaderboard Arena Stick War Saga bersama squad Spearton, Archidon, dan Magikill.
+                    </p>
+                </div>
+
+                <!-- Mobile Legends Banner Showcase -->
+                <div class="glass-card p-6 rounded-3xl border border-purple-500/40 relative overflow-hidden group hover:border-purple-400 transition-all shadow-2xl">
+                    <div class="absolute -left-12 -bottom-12 w-48 h-48 bg-purple-500/10 rounded-full blur-3xl pointer-events-none"></div>
+
+                    <div class="flex items-center justify-between mb-4">
+                        <div class="flex items-center gap-2">
+                            <span class="w-3 h-3 rounded-full bg-purple-400 animate-ping"></span>
+                            <h3 class="text-lg font-black text-white">Mobile Legends Mythic League</h3>
+                        </div>
+                        <span class="text-[10px] font-extrabold bg-purple-500/20 text-purple-300 px-2.5 py-1 rounded-full border border-purple-500/30">
+                            RANK PUSH
+                        </span>
+                    </div>
+
+                    <!-- SVG Illustration for Mobile Legends Emblem & Rank Graphics -->
+                    <div class="w-full h-64 sm:h-72 rounded-2xl bg-slate-900 overflow-hidden relative border border-gray-800 flex items-center justify-center">
+                        <svg viewBox="0 0 500 500" class="w-full h-full object-cover" xmlns="http://www.w3.org/2000/svg">
+                            <!-- Background Dark Portal -->
+                            <rect width="500" height="500" fill="#090d16" />
+                            <circle cx="250" cy="250" r="200" fill="#581c87" opacity="0.25" />
+                            <circle cx="250" cy="250" r="140" fill="#06b6d4" opacity="0.15" />
+
+                            <!-- Glowing Wings (Mythic Crest Structure) -->
+                            <path d="M 250 250 L 100 120 Q 50 220 120 320 L 250 250 Z" fill="url(#purpleGrad)" opacity="0.8" />
+                            <path d="M 250 250 L 400 120 Q 450 220 380 320 L 250 250 Z" fill="url(#purpleGrad)" opacity="0.8" />
+
+                            <!-- Gold Crown Stars Structure -->
+                            <path d="M 250 90 L 275 145 L 335 150 L 290 190 L 305 250 L 250 220 L 195 250 L 210 190 L 165 150 L 225 145 Z" fill="#f59e0b" stroke="#fbbf24" stroke-width="4" />
+
+                            <!-- Mythic Star Gem Center -->
+                            <polygon points="250,170 280,230 250,290 220,230" fill="#06b6d4" stroke="#e0f2fe" stroke-width="5" />
+                            <circle cx="250" cy="230" r="15" fill="#ffffff" />
+
+                            <!-- Bottom Swords Cross -->
+                            <path d="M 140 380 L 360 160 M 360 380 L 140 160" stroke="#94a3b8" stroke-width="12" stroke-linecap="round" />
+                            <path d="M 140 380 L 360 160 M 360 380 L 140 160" stroke="#cbd5e1" stroke-width="5" stroke-linecap="round" />
+
+                            <!-- Rank Stars Orbiting -->
+                            <g fill="#f59e0b">
+                                <circle cx="150" cy="110" r="12" />
+                                <circle cx="250" cy="60" r="16" />
+                                <circle cx="350" cy="110" r="12" />
+                            </g>
+
+                            <defs>
+                                <linearGradient id="purpleGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" stop-color="#7c3aed" />
+                                    <stop offset="100%" stop-color="#3b82f6" />
+                                </linearGradient>
+                            </defs>
+                        </svg>
+
+                        <div class="absolute bottom-3 left-3 right-3 bg-slate-950/80 backdrop-blur-md px-3 py-2 rounded-xl border border-gray-700 flex justify-between items-center text-xs">
+                            <span class="font-bold text-purple-400"><i class="fa-solid fa-crown mr-1"></i> Mythic Glory & Immortal Star</span>
+                            <span class="text-gray-400 text-[10px]">Mobile Legends BB</span>
+                        </div>
+                    </div>
+
+                    <p class="text-xs text-gray-300 mt-4 leading-relaxed">
+                        Garansi kencang dari Tier Epic, Legend hingga Mythic Immortal dengan Win Rate tinggi & jaminan anti-lose streak.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-brand-dark border-t border-gray-800 text-gray-400 text-xs mt-auto">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+                <div class="space-y-3 md:col-span-2">
+                    <div class="flex items-center gap-2">
+                        <div class="w-8 h-8 rounded-lg bg-gradient-to-tr from-brand-purple to-amber-400 flex items-center justify-center font-bold text-white text-sm">
+                            <i class="fa-solid fa-gamepad"></i>
+                        </div>
+                        <span class="text-base font-black text-white">GAMESTORE OFFICIAL</span>
+                    </div>
+                    <p class="text-gray-400 leading-relaxed max-w-sm">
+                        Layanan jasa joki terpercaya untuk Mobile Legends dan Stick War Saga. Pengerjaan cepat, aman, dan bergaransi resmi.
+                    </p>
+                </div>
+
+                <div>
+                    <h4 class="text-white font-bold mb-3">Pilihan Game</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#order" onclick="selectGameMode('mlbb')" class="hover:text-amber-400 transition-colors">Opsi 1: Mobile Legends</a></li>
+                        <li><a href="#order" onclick="selectGameMode('stickwar')" class="hover:text-amber-400 transition-colors">Opsi 2: Stick War Saga</a></li>
+                        <li><a href="#pricelist" class="hover:text-amber-400 transition-colors">Cek Price List</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-white font-bold mb-3">Kontak Official</h4>
+                    <ul class="space-y-2">
+                        <li><a href="https://wa.me/6285697038578" target="_blank" class="hover:text-emerald-400 transition-colors"><i class="fa-brands fa-whatsapp text-emerald-400 mr-2"></i> WhatsApp: <b>085697038578</b></a></li>
+                        <li><a href="https://instagram.com/tugas_uji_kom" target="_blank" class="hover:text-purple-400 transition-colors"><i class="fa-brands fa-instagram text-purple-400 mr-2"></i> Instagram: <b>@tugas_uji_kom</b></a></li>
+                        <li><i class="fa-solid fa-clock text-amber-400 mr-2"></i> Jam Kerja: 24 Jam Nonstop</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="pt-6 border-t border-gray-800 text-center flex flex-col sm:flex-row justify-between items-center gap-3 text-gray-500 text-[11px]">
+                <p>&copy; 2026 GAMESTORE. All rights reserved.</p>
+                <p>Instagram: @tugas_uji_kom | WA: 085697038578</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const ADMIN_WHATSAPP_NUMBER = "6285697038578";
+
+        let currentGameMode = 'mlbb'; // 'mlbb' or 'stickwar'
+        let currentMLService = 'per_bintang';
+        let currentSWService = 'sw_campaign';
+
+        // Rates for MLBB
+        const mlPrices = {
+            per_bintang: { grandmaster: 3000, epic: 5000, legend: 6000, mythic: 10000, honor: 13000, glory: 18000 },
+            joki_classic: { grandmaster: 3500, epic: 4000, legend: 5000, mythic: 6000, honor: 7000, glory: 8000 },
+            joki_gendong: { grandmaster: 6000, epic: 8000, legend: 10000, mythic: 15000, honor: 20000, glory: 25000 }
+        };
+
+        // Packages for Stick War Saga
+        const swPackages = {
+            sw_campaign: [
+                { value: "25000", label: "Campaign Normal Full Clear (Rp 25.000)" },
+                { value: "45000", label: "Campaign Hard Full Clear (Rp 45.000)" },
+                { value: "75000", label: "Campaign Insane Full Clear (Rp 75.000)" },
+                { value: "15000", label: "Request 3 Stage Insane (Rp 15.000)" }
+            ],
+            sw_arena: [
+                { value: "20000", label: "Arena Rank: Bronze ➔ Silver (Rp 20.000)" },
+                { value: "35000", label: "Arena Rank: Silver ➔ Gold (Rp 35.000)" },
+                { value: "55000", label: "Arena Rank: Gold ➔ Platinum (Rp 55.000)" },
+                { value: "85000", label: "Arena Rank: Platinum ➔ Grandmaster (Rp 85.000)" },
+                { value: "15000", label: "Paket 100 Arena Stars (Rp 15.000)" }
+            ],
+            sw_farming: [
+                { value: "30000", label: "Farming 5,000 Gems (Rp 30.000)" },
+                { value: "70000", label: "Farming 15,000 Gems (Rp 70.000)" },
+                { value: "40000", label: "Unlock All Spearton/Magikill Cards (Rp 40.000)" },
+                { value: "50000", label: "Full Stat Army Max Upgrade (Rp 50.000)" }
+            ]
+        };
+
+        function selectGameMode(game) {
+            currentGameMode = game;
+
+            // Update Hero Cards UI
+            const cardML = document.getElementById('heroCardMLBB');
+            const cardSW = document.getElementById('heroCardStickWar');
+            const btnML = document.getElementById('gameBtnMLBB');
+            const btnSW = document.getElementById('gameBtnStickWar');
+            const priceML = document.getElementById('priceTabMLBB');
+            const priceSW = document.getElementById('priceTabStickWar');
+
+            const mlPriceCont = document.getElementById('mlbbPriceContainer');
+            const swPriceCont = document.getElementById('stickwarPriceContainer');
+            const mlAccInputs = document.getElementById('mlbbAccountInputs');
+            const swAccInputs = document.getElementById('stickwarAccountInputs');
+            const mlServWrap = document.getElementById('mlbbServiceWrapper');
+            const swServWrap = document.getElementById('stickwarServiceWrapper');
+            const gameLabel = document.getElementById('selectedGameLabel');
+
+            if (game === 'mlbb') {
+                // Hero card styling
+                cardML.className = "glass-card p-5 rounded-2xl border-2 border-purple-500 cursor-pointer bg-purple-950/30 transition-all hover:scale-[1.02] text-left relative overflow-hidden group";
+                cardSW.className = "glass-card p-5 rounded-2xl border border-gray-700 cursor-pointer hover:border-amber-500 transition-all hover:scale-[1.02] text-left relative overflow-hidden group";
+
+                // Order form game toggle styling
+                btnML.className = "p-3.5 rounded-2xl border-2 border-purple-500 bg-purple-950/40 text-left transition-all flex items-center gap-3";
+                btnSW.className = "p-3.5 rounded-2xl border border-gray-700 bg-brand-dark/60 text-left transition-all flex items-center gap-3";
+
+                // Price list button styling
+                priceML.className = "px-6 py-3 rounded-xl font-extrabold text-xs transition-all bg-purple-600 text-white shadow-lg glow-purple flex items-center gap-2";
+                priceSW.className = "px-6 py-3 rounded-xl font-extrabold text-xs transition-all bg-brand-dark text-gray-400 border border-gray-700 hover:border-amber-400 flex items-center gap-2";
+
+                // Containers visibility
+                mlPriceCont.classList.remove('hidden');
+                swPriceCont.classList.add('hidden');
+
+                mlAccInputs.classList.remove('hidden');
+                swAccInputs.classList.add('hidden');
+
+                mlServWrap.classList.remove('hidden');
+                swServWrap.classList.add('hidden');
+
+                gameLabel.innerText = "Mobile Legends: Bang Bang";
+                gameLabel.className = "text-xs font-bold text-purple-400";
+            } else {
+                // Hero card styling
+                cardSW.className = "glass-card p-5 rounded-2xl border-2 border-amber-500 cursor-pointer bg-amber-950/30 transition-all hover:scale-[1.02] text-left relative overflow-hidden group";
+                cardML.className = "glass-card p-5 rounded-2xl border border-gray-700 cursor-pointer hover:border-purple-500 transition-all hover:scale-[1.02] text-left relative overflow-hidden group";
+
+                // Order form game toggle styling
+                btnSW.className = "p-3.5 rounded-2xl border-2 border-amber-500 bg-amber-950/40 text-left transition-all flex items-center gap-3";
+                btnML.className = "p-3.5 rounded-2xl border border-gray-700 bg-brand-dark/60 text-left transition-all flex items-center gap-3";
+
+                // Price list button styling
+                priceSW.className = "px-6 py-3 rounded-xl font-extrabold text-xs transition-all bg-amber-500 text-slate-950 shadow-lg glow-gold flex items-center gap-2";
+                priceML.className = "px-6 py-3 rounded-xl font-extrabold text-xs transition-all bg-brand-dark text-gray-400 border border-gray-700 hover:border-amber-400 flex items-center gap-2";
+
+                // Containers visibility
+                swPriceCont.classList.remove('hidden');
+                mlPriceCont.classList.add('hidden');
+
+                swAccInputs.classList.remove('hidden');
+                mlAccInputs.classList.add('hidden');
+
+                swServWrap.classList.remove('hidden');
+                mlServWrap.classList.add('hidden');
+
+                gameLabel.innerText = "Stick War: Saga";
+                gameLabel.className = "text-xs font-bold text-amber-400";
+
+                populateSWPackages();
+            }
+
+            hideErrorBox();
+            calculateTotal();
+        }
+
+        function setMLBBService(service) {
+            selectGameMode('mlbb');
+            currentMLService = service;
+
+            document.querySelectorAll('.ml-btn').forEach(btn => {
+                btn.classList.remove('border-amber-500', 'bg-brand-card');
+                btn.classList.add('border-gray-700', 'bg-brand-dark');
+            });
+
+            const activeBtn = document.getElementById(`btnML-${service}`);
+            if (activeBtn) {
+                activeBtn.classList.remove('border-gray-700', 'bg-brand-dark');
+                activeBtn.classList.add('border-amber-500', 'bg-brand-card');
+            }
+
+            const targetWrapper = document.getElementById('mlTargetRankWrapper');
+            if (service === 'paket_rank') {
+                targetWrapper.innerHTML = `
+                    <label class="block text-xs font-semibold text-gray-300 mb-1">Pilih Paket Rank MLBB</label>
+                    <select id="mlPaketRankSelect" onchange="calculateTotal()" class="w-full bg-brand-card border border-gray-700 rounded-xl px-3 py-2.5 text-xs text-white focus:outline-none focus:border-amber-400">
+                        <option value="115000" data-label="Epic V ➔ Legend V">Epic V ➔ Legend V (Rp 115.000)</option>
+                        <option value="140000" data-label="Legend V ➔ Mythic">Legend V ➔ Mythic (Rp 140.000)</option>
+                        <option value="235000" data-label="Mythic ➔ Mythic Honor">Mythic ➔ Mythic Honor (Rp 235.000)</option>
+                        <option value="310000" data-label="Mythic Honor ➔ Mythic Glory">Mythic Honor ➔ Mythic Glory (Rp 310.000)</option>
+                        <option value="245000" data-label="Epic V ➔ Mythic Star">Epic V ➔ Mythic Star (Rp 245.000)</option>
+                    </select>
+                `;
+            } else {
+                let countLabel = service === 'joki_classic' ? 'Jumlah Match Classic' : (service === 'joki_gendong' ? 'Jumlah Win Mabar' : 'Jumlah Bintang Target');
+                targetWrapper.innerHTML = `
+                    <label class="block text-xs font-semibold text-gray-300 mb-1">${countLabel}</label>
+                    <input type="number" id="mlStarCount" min="1" max="100" value="5" onchange="calculateTotal()" onkeyup="calculateTotal()" class="w-full bg-brand-card border border-gray-700 rounded-xl px-3 py-2.5 text-xs text-white focus:outline-none focus:border-amber-400">
+                `;
+            }
+
+            calculateTotal();
+        }
+
+        function setSWService(service) {
+            selectGameMode('stickwar');
+            currentSWService = service;
+
+            document.querySelectorAll('.sw-btn').forEach(btn => {
+                btn.classList.remove('border-amber-500', 'bg-brand-card');
+                btn.classList.add('border-gray-700', 'bg-brand-dark');
+            });
+
+            const activeBtn = document.getElementById(`btnSW-${service}`);
+            if (activeBtn) {
+                activeBtn.classList.remove('border-gray-700', 'bg-brand-dark');
+                activeBtn.classList.add('border-amber-500', 'bg-brand-card');
+            }
+
+            populateSWPackages();
+            calculateTotal();
+        }
+
+        function populateSWPackages() {
+            const select = document.getElementById('swPackageSelect');
+            if (!select) return;
+
+            const list = swPackages[currentSWService] || [];
+            select.innerHTML = list.map(item => `<option value="${item.value}" data-label="${item.label}">${item.label}</option>`).join('');
+        }
+
+        function calculateTotal() {
+            let total = 0;
+            let estHours = "1 - 3 Jam";
+
+            if (currentGameMode === 'mlbb') {
+                if (currentMLService === 'paket_rank') {
+                    const select = document.getElementById('mlPaketRankSelect');
+                    if (select) total = parseInt(select.value) || 0;
+                    estHours = "12 - 24 Jam";
+                } else {
+                    const startRank = document.getElementById('mlStartRank').value;
+                    const starInput = document.getElementById('mlStarCount');
+                    const count = starInput ? (parseInt(starInput.value) || 0) : 0;
+                    
+                    const rate = (mlPrices[currentMLService] && mlPrices[currentMLService][startRank]) ? mlPrices[currentMLService][startRank] : 5000;
+                    total = rate * count;
+
+                    if (count <= 5) estHours = "1 - 3 Jam";
+                    else if (count <= 15) estHours = "4 - 8 Jam";
+                    else estHours = "1 - 2 Hari";
+                }
+            } else { // Stick War Saga
+                const select = document.getElementById('swPackageSelect');
+                if (select) total = parseInt(select.value) || 0;
+                
+                if (currentSWService === 'sw_campaign') estHours = "1 - 4 Jam";
+                else if (currentSWService === 'sw_arena') estHours = "3 - 12 Jam";
+                else estHours = "1 - 2 Jam";
+            }
+
+            document.getElementById('totalPrice').innerText = `Rp ${total.toLocaleString('id-ID')}`;
+            document.getElementById('estimatedTime').innerHTML = `<i class="fa-solid fa-clock mr-1"></i> Estimasi: ${estHours}`;
+
+            return total;
+        }
+
+        function showErrorBox(msg) {
+            const box = document.getElementById('formErrorBox');
+            const text = document.getElementById('formErrorMessage');
+            text.innerText = msg;
+            box.classList.remove('hidden');
+        }
+
+        function hideErrorBox() {
+            document.getElementById('formErrorBox').classList.add('hidden');
+        }
+
+        function submitOrderWhatsApp() {
+            hideErrorBox();
+            const paymentMethod = document.querySelector('input[name="payment"]:checked').value;
+            const totalPrice = document.getElementById('totalPrice').innerText;
+            const notes = document.getElementById('orderNotes').value.trim() || "-";
+
+            let waMessage = "";
+
+            if (currentGameMode === 'mlbb') {
+                const userId = document.getElementById('mlUserId').value.trim();
+                const zoneId = document.getElementById('mlZoneId').value.trim();
+                const loginType = document.getElementById('mlLoginType').value;
+                const email = document.getElementById('mlAccountEmail').value.trim();
+                const password = document.getElementById('mlAccountPassword').value.trim();
+                const startRank = document.getElementById('mlStartRank').options[document.getElementById('mlStartRank').selectedIndex].text;
+
+                if (!userId || !zoneId) {
+                    showErrorBox("Silakan masukkan User ID dan Zone ID MLBB!");
+                    return;
+                }
+                if (!email || !password) {
+                    showErrorBox("Silakan lengkapi Email/No HP dan Password Login akun MLBB!");
+                    return;
+                }
+
+                let serviceName = "Joki Per Bintang";
+                let detailOrder = "";
+
+                if (currentMLService === 'paket_rank') {
+                    serviceName = "Joki Paket Rank Borongan";
+                    const select = document.getElementById('mlPaketRankSelect');
+                    detailOrder = select ? select.options[select.selectedIndex].getAttribute('data-label') : "Paket Borongan";
+                } else if (currentMLService === 'joki_classic') {
+                    serviceName = "Joki Classic WR";
+                    const count = document.getElementById('mlStarCount').value;
+                    detailOrder = `${count} Match Classic (Rank: ${startRank})`;
+                } else if (currentMLService === 'joki_gendong') {
+                    serviceName = "Joki Gendong / Mabar";
+                    const count = document.getElementById('mlStarCount').value;
+                    detailOrder = `${count} Win Mabar (Rank: ${startRank})`;
+                } else {
+                    const count = document.getElementById('mlStarCount').value;
+                    detailOrder = `${count} Bintang (Rank Awal: ${startRank})`;
+                }
+
+                waMessage = 
+`*FORMAT ORDER JOKI MOBILE LEGENDS* 🎮
+-----------------------------------------
+🆔 *User ID & Server:* ${userId} (${zoneId})
+🔐 *Tipe Login:* ${loginType}
+📧 *Email/No HP:* ${email}
+🔑 *Password:* ${password}
+-----------------------------------------
+🎯 *Layanan:* ${serviceName}
+📊 *Detail Order:* ${detailOrder}
+📝 *Request Hero/Catatan:* ${notes}
+-----------------------------------------
+💳 *Metode Bayar:* ${paymentMethod}
+💰 *Total Harga:* ${totalPrice}
+-----------------------------------------
+*Mohon segera diproses Admin, Terima Kasih!*`;
+
+            } else { // Stick War Saga
+                const playerId = document.getElementById('swPlayerId').value.trim();
+                const loginType = document.getElementById('swLoginType').value;
+                const email = document.getElementById('swAccountEmail').value.trim();
+                const password = document.getElementById('swAccountPassword').value.trim();
+
+                if (!playerId) {
+                    showErrorBox("Silakan masukkan IGN / Player Code Stick War Saga Anda!");
+                    return;
+                }
+                if (!email || !password) {
+                    showErrorBox("Silakan masukkan Email & Password Login akun Stick War Saga!");
+                    return;
+                }
+
+                const select = document.getElementById('swPackageSelect');
+                const selectedPackage = select ? select.options[select.selectedIndex].getAttribute('data-label') : "Stick War Package";
+
+                waMessage = 
+`*FORMAT ORDER JOKI STICK WAR: SAGA* ⚔️
+-----------------------------------------
+👤 *IGN / Player Code:* ${playerId}
+🔐 *Metode Login:* ${loginType}
+📧 *Email Login:* ${email}
+🔑 *Password:* ${password}
+-----------------------------------------
+🎯 *Game:* Stick War: Saga
+📊 *Paket Order:* ${selectedPackage}
+📝 *Catatan Formasi/Deck:* ${notes}
+-----------------------------------------
+💳 *Metode Bayar:* ${paymentMethod}
+💰 *Total Harga:* ${totalPrice}
+-----------------------------------------
+*Mohon segera diproses Admin, Terima Kasih!*`;
+            }
+
+            const encodedMessage = encodeURIComponent(waMessage);
+            const waURL = `https://wa.me/${ADMIN_WHATSAPP_NUMBER}?text=${encodedMessage}`;
+
+            window.open(waURL, '_blank');
+        }
+
+        // Mobile Menu Toggle
+        document.getElementById('mobile-menu-btn').addEventListener('click', function() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        });
+
+        // Initialize default view on load
+        window.onload = function() {
+            selectGameMode('mlbb');
+            setMLBBService('per_bintang');
+        }
+    </script>
+</body>
+</html>
